@@ -1,0 +1,51 @@
+[
+	{
+		"text": "ENTREES",
+		"value": "starters", 
+		"names": [
+			"Pâté de campagne", 
+			"Oeufs mimosa", 
+			"Salade de chèvre chaud aux noix", 
+			"Flammekueche", 
+			"Salade niçoise", 
+			"Salade César", 
+			"Rillettes de saumon", 
+			"Cake aux olives et jambon"
+		],
+		"icon": "leaf-outline"
+	},
+	{
+		"text": "PLATS", 
+		"value": "mains",
+		"names": [
+			"Blanquette de veau", 
+			"Lasagnes à la bolognaise", 
+			"Moussaka Grecque", 
+			"Filet mignon en croûte", 
+			"Boeuf Bourguignon", 
+			"Hachis Parmentier", 
+			"Gratin Dauphinois", 
+			"Chili con carne",
+			"Poulet basquaise",
+			"Couscous poulet et merguez",
+			"Tajine d'agneau aux pruneaux"
+		],
+		"icon": "pizza-outline"
+	},
+	{
+		"text": "DESSERTS", 
+		"value": "desserts",
+		"names": [
+			"Fondant au chocolat", 
+			"Crêpes", 
+			"Moussaka Grecque", 
+			"Mousse au chocolat", 
+			"Île flottante", 
+			"Tarte aux pommes", 
+			"Tiramisù", 
+			"Crème brûlée",
+			"Profiteroles"
+		],
+		"icon": "nutrition-outline"
+	}
+]

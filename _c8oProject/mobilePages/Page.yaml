@@ -1,5 +1,10 @@
 ↑isRoot: true
-comment: My First Page as root page
+comment: |
+  <ul>
+  <li>NGX Accordions</li>
+  </ul>
+  <br/>
+  <img src="doc/c8oprj-sample-accordions.gif" />
 preloadPriority: high
 scriptContent: 
   - xmlizable: 
@@ -40,7 +45,7 @@ title: First page
         textValue: 
           - xmlizable: 
             - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-            - MobileSmartSourceType: plain:Page
+            - MobileSmartSourceType: plain:Accordions usage
     ↓ButtonSet2 [ngx.components.UIDynamicElement-1588170811054]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
       tagName: ion-buttons
@@ -60,6 +65,85 @@ title: First page
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
+  ↓Grid [ngx.components.UIDynamicElement-1674728802612]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓GridRow [ngx.components.UIDynamicElement-1674728802614]: 
+      beanData: '{"ionBean":"GridRow"}'
+      tagName: ion-row
+      ↓GridCol1 [ngx.components.UIDynamicElement-1674728802622]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓AccordionGroup [ngx.components.UIDynamicElement-1674726983470]: 
+          beanData: '{"ionBean":"AccordionGroup"}'
+          identifier: accordion_group
+          tagName: ion-accordion-group
+          ↓Directive [ngx.components.UIControlDirective-1674727000424]: 
+            directiveItemName: _accordion
+            directiveSource: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Sequence","project":"accordion","input":"","model":{"data":[{"sequence":"accordion.get_data","marker":""}],"path":"","prefix":"","suffix":"?.array","custom":"","useCustom":false}}
+            ↓Accordion [ngx.components.UIDynamicElement-1674726983472]: 
+              beanData: '{"ionBean":"Accordion","Value":"script:_accordion.value"}'
+              tagName: ion-accordion
+              ↓GenericItem [ngx.components.UIDynamicElement-1674726983474]: 
+                beanData: '{"ionBean":"GenericItem","IonSlot":"plain:header"}'
+                tagName: ion-item
+                ↓Label [ngx.components.UIDynamicElement-1674726983476]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [ngx.components.UIText-1674726983478]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:_accordion.text
+              ↓ListContainer [ngx.components.UIDynamicElement-1674726983480]: 
+                beanData: |
+                  '{
+                   "ionBean": "List",
+                   "IonSlot": "plain:content",
+                   "Inset": "plain:true"
+                  }'
+                tagName: ion-list
+                ↓Directive [ngx.components.UIControlDirective-1674735139882]: 
+                  directiveIndexName: _idx_name
+                  directiveItemName: _name
+                  directiveSource: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                      - MobileSmartSourceType: script:_accordion.names
+                  ↓ListItem [ngx.components.UIDynamicElement-1674726983482]: 
+                    beanData: '{"ionBean":"ListItem"}'
+                    tagName: ion-item
+                    ↓Label [ngx.components.UIDynamicElement-1674726983484]: 
+                      beanData: '{"ionBean":"Label"}'
+                      tagName: ion-label
+                      ↓Text [ngx.components.UIText-1674726983486]: 
+                        textValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                            - MobileSmartSourceType: script:_name
+          ↓Event [ngx.components.UIControlEvent-1674753966805]: 
+            attrName: (ionChange)
+            eventName: ionChange
+            ↓state_change [ngx.components.UICustomAction-1674754012459]: 
+              actionValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+                      		console.log("Expanded: ", (event.detail.value || ''None''));
+                      		resolve();
+                      '
+            ↓Toast [ngx.components.UIDynamicAction-1674754658288]: 
+              beanData: |
+                '{
+                 "ionBean": "ToastAction",
+                 "message": "script:\"Expanded: \"+(out.detail.value || ''None'')",
+                 "position": "plain:top"
+                }'
 ↓Footer [ngx.components.UIDynamicElement-1491634242460]: 
   beanData: '{"ionBean":"Footer"}'
   comment: Page footer
@@ -70,22 +154,53 @@ title: First page
     ↓ButtonSet [ngx.components.UIDynamicElement-1588170246138]: 
       beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:start"}'
       tagName: ion-buttons
-      ↓Button1 [ngx.components.UIDynamicElement-1491634332730]: 
-        beanData: '{"ionBean":"Button"}'
-        tagName: ion-button
-        ↓Text [ngx.components.UIText-1491634340354]: 
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Action 1
-    ↓ButtonSet1 [ngx.components.UIDynamicElement-1588170269871]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:end"}'
-      tagName: ion-buttons
-      ↓Button2 [ngx.components.UIDynamicElement-1491634376874]: 
-        beanData: '{"ionBean":"Button"}'
-        tagName: ion-button
-        ↓Text [ngx.components.UIText-1491634383107]: 
-          textValue: 
-            - xmlizable: 
-              - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
-              - MobileSmartSourceType: plain:Action 2
+      ↓Directive [ngx.components.UIControlDirective-1674750752866]: 
+        directiveItemName: _accordion
+        directiveSource: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Sequence","project":"accordion","input":"","model":{"data":[{"sequence":"accordion.get_data","marker":""}],"path":"","prefix":"","suffix":"?.array","custom":"","useCustom":false}}
+        ↓Button [ngx.components.UIDynamicElement-1491634332730]: 
+          beanData: '{"ionBean":"Button"}'
+          tagName: ion-button
+          ↓Icon [ngx.components.UIDynamicElement-1674752503015]: 
+            beanData: |
+              '{
+               "ionBean": "Icon",
+               "IconName": "script:_accordion.icon",
+               "IconSlot": "plain:start"
+              }'
+            tagName: ion-icon
+          ↓Text [ngx.components.UIText-1491634340354]: 
+            textValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:_accordion.text
+          ↓Event [ngx.components.UIControlEvent-1674745722682]: 
+            ↓PublishEvent [ngx.components.UIDynamicAction-1674745885631]: 
+              beanData: |
+                '{
+                 "ionBean": "PublishEventAction",
+                 "topic": "plain:toggle_accordion",
+                 "data": "script:{\"item\": _accordion.value}"
+                }'
+↓PageEvent [ngx.components.UIPageEvent-1674745034533]: 
+  ↓CallSequence [ngx.components.UIDynamicAction-1674745042032]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:accordion.get_data"}'
+↓Subscribe_Handler [ngx.components.UIEventSubscriber-1674745833074]: 
+  topic: toggle_accordion
+  ↓toggle_accordion_action [ngx.components.UICustomAction-1674745867583]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '		page.c8o.log.debug(''[MB] ''+ props.actionFunction +'': ''+ props.actionName);
+            		page.accordion_group.value = page.accordion_group.value == vars.accordion_value.item ? undefined : vars.accordion_value.item;
+            		resolve();
+            '
+    ↓accordion_value [ngx.components.UIControlVariable-1674751041957]: 
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.ngx.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:out

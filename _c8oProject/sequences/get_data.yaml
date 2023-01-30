@@ -1,0 +1,24 @@
+↓jElement [steps.ElementStep-1674740161429]: 
+  expression: context.getProjectUrl()+"menu.json"
+  nodeName: connection_string
+  output: false
+↓Call_Transaction [steps.TransactionStep-1674740137882]: 
+  connectionStringDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1674740161429
+        - java.lang.String: 
+          - ↑value: ./text()
+  contextName: context.getProjectUrl
+  sourceTransaction: accordion.HTTP_connector.JSON_HTTP_transaction
+↓Copy [steps.XMLCopyStep-1674744934755]: 
+  sourceDefinition: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+      - com.twinsoft.convertigo.beans.common.XMLVector: 
+        - java.lang.String: 
+          - ↑value: 1674740137882
+        - java.lang.String: 
+          - ↑value: ./document/*

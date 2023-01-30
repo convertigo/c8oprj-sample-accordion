@@ -1,8 +1,11 @@
 ↑convertigo: 8.1.0.m006
 ↓accordion [core.Project]: 
-  comment: Convertigo NGX builder Project
+  comment: How to use Accordions
   corsOrigin: =Origin
+  version: 1.0
+  ↓HTTP_connector [connectors.HttpConnector]: 🗏 connectors/HTTP_connector.yaml
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓get_data [sequences.GenericSequence]: 🗏 sequences/get_data.yaml
   ↓Project_reference [references.ProjectSchemaReference]: 
     comment: ngx builder template
     projectName: mobilebuilder_tpl_8_1_0_ngx=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_8_1_0_ngx.zip
